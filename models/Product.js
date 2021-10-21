@@ -12,17 +12,17 @@ Product.init(
   {
     // define columns
     id: {
-      tpye: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false, 
       primaryKey: true,
       autoIncrement:true
     },
     product_name: {
-      type: Datatypres.String,
+      type: DataTypes.String,
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMNAL
+      type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
         isDecimal: true
