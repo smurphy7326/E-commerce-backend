@@ -6,15 +6,14 @@ class Category extends Model {}
 
 Category.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER, // this allows the answer to be a real number
       allowNull: false, // cannot allow a false answer
       primaryKey: true, 
       autoIncrement: true
     },
-    category_name: 
-      type: Datatypes.STRING,
+    category_name: {
+      type: DataTypes.STRING, 
       allowNull: false
     }
   },
