@@ -1,3 +1,6 @@
+// This is the same as the weekly module that we were given. 
+// However the decimals are new to this one.
+
 require('dotenv').config();
 
 const Sequelize = require('sequelize');
