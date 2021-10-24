@@ -32,23 +32,26 @@ router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   Product.findOne({
-    where: {
-      id: req.params.id
-    },
     include: [
-      Category,
+      {
+        model: Category
+      },
       {
         model: Tag,
         through: ProductTag,
         as: 'tags',
       }
-    ]
+    ],
+
+    where: {
+      id: req.params.id // had this up above before and it caused an internal error that was corrected and moved the }) as well to above the re.json data so i could not have error lines
+    }
+  })
     .then(productData => { res.json(productData);
     })
     .catch(err => {
       console.log(); // same reasoning as above
       res.status(500).json(err);
-    })
   })
 });
 

@@ -7,8 +7,8 @@ class Category extends Model {}
 Category.init(
   {
     id: {
-      type: DataTypes.INTEGER, // this allows the answer to be a real number
-      allowNull: false, // cannot allow a false answer
+      type: DataTypes.INTEGER,
+      allowNull: false, 
       primaryKey: true, 
       autoIncrement: true
     },
